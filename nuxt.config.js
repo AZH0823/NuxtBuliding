@@ -20,7 +20,10 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
+
   css: [
+    // 使Vue Component 與 Page 可以使用tailwind @apply 指令
+    '~/assets/css/tailwind.css'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -43,9 +46,9 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
      loaders: {
-      scss: {
-          implementation: require('sass'),
-        },
+     scss: {
+        implementation: require('sass'),
+      },
     },
   }
 }

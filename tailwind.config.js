@@ -1,7 +1,10 @@
 const colors = require('tailwindcss/colors')
 
 module.exports = {
-  purge: [],
+  // 使Vue Component 與 Page 可以使用tailwind @apply 指令
+  mode: 'jit',
+  purge: ['./components/**/*.vue', './pages/**/*.vue', './layouts/**/*.vue'],
+  // 使Vue Component 與 Page 可以使用tailwind @apply 指令
   presets: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
@@ -182,7 +185,7 @@ module.exports = {
       './layouts/**/*.vue',
       './pages/**/*.vue',
       './plugins/**/*.js',
-      './nuxt.config.js',
+      './nuxt.config.js'
     ],
     cursor: {
       auto: 'auto',
@@ -793,6 +796,7 @@ module.exports = {
       '9/12': '75%',
       '10/12': '83.333333%',
       '11/12': '91.666667%',
+      '100px':'100px',
       full: '100%',
       screen: '100vw',
       min: 'min-content',
