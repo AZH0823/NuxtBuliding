@@ -20,6 +20,8 @@
     "@nuxtjs/tailwindcss": "^6.6.5",
     "autoprefixer": "^10.2.6",
     "postcss": "^8.4.21",
+    "sass": "^1.61.0",
+    "sass-loader": "^10.0.0",
     "tailwindcss": "^2.2.19"
   }
 }
