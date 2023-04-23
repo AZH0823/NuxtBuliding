@@ -8,6 +8,9 @@ module.exports = {
   presets: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    extend:{
+      margin: ['first-child', 'last-child'],
+    },
     screens: {
       sm: '640px',
       md: '768px',
@@ -29,6 +32,11 @@ module.exports = {
       indigo: colors.indigo,
       purple: colors.violet,
       pink: colors.pink,
+      primary:'#FF6363',
+      secondory:{
+        100:'#E2E2D5',
+        200:'#888883'
+      }
     },
     spacing: {
       px: '1px',
