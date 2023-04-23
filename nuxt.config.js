@@ -1,3 +1,6 @@
+
+const path = require('path')
+const { resolve } = require('path')
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -23,11 +26,17 @@ export default {
 
   css: [
     // 使Vue Component 與 Page 可以使用tailwind @apply 指令
-    '~/assets/css/tailwind.css'
+    '~/assets/css/tailwind.css',
+    // import elemnt UI
+    'element-ui/lib/theme-chalk/index.css'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    //  { src: '~/plugins/icons.js', ssr: true }
+    // '@/plugins/svg-icon' //注册插件文件
+    // import elemnt UI (in plugins folder)
+    '@/plugins/element-ui'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -37,15 +46,26 @@ export default {
   buildModules: [
     '@nuxtjs/tailwindcss',
     '@nuxt/postcss8',
+    '@nuxtjs/fontawesome',
+    '@nuxtjs/svg'
   ],
+  fontawesome: {
+     component: 'Fa',
+     suffix: false,
+     icons: {
+       solid: true,
+       brands: true,
+     },
+ },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-     loaders: {
+    loaders: {
      scss: {
         implementation: require('sass'),
       },
