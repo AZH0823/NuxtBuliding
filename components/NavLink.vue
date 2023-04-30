@@ -33,6 +33,11 @@ export default {
               <span class="md:flex-1 block">elemnt UI</span><fa class="absolute top-[15%] right-[25%]"  :icon="['fas', 'comment']" />
             </nuxt-link>
           </li>
+          <li class="w-full">
+            <nuxt-link to="/imageUpload" class="md:flex items-center text-center relative">
+              <span class="md:flex-1 block">imageUpload</span><fa class="absolute top-[15%] right-[25%]" :icon="['fas', 'upload']" />
+            </nuxt-link>
+          </li>
       </ul>
     </nav>
   </div>
